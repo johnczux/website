@@ -1,0 +1,14 @@
+.MainContent 
+{
+    background-color: #f8f9fa;
+    text-align:center;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top:1%;
+}
+.SubContent
+{
+    background-color: #f7f8fa;
+    margin-left: 3%;
+    margin-right:3%;
+}
