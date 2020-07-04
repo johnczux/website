@@ -10,28 +10,25 @@
     </button>
     <div class="collapse navbar-collapse " id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item active ">
+          <a class="nav-link" routerLink="/main" routerLinkActive="active" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
+        
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/projects" routerLinkActive="active" >Projects</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Experimental</a>
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/experimental" routerLinkActive="active" href="#">Experimental</a>
+        </li>
+        <li class="nav-item  ">   
+          <a class="nav-link">Dark Theme: <label class="switch  mr-3 " style="top:3px; left:5px;" >
+            <input type="checkbox" >
+            <span class="slider round" ></span>
+          </label></a>
+          
         </li>
 
-        <li class="nav-item dropdown ml-auto">
-          <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Settings
-          </a>
-          <div class="dropdown-menu dropdown-menu-right"  aria-labelledby="navbarDropdownMenuLink" >
-            <label class="switch" >
-              <input type="checkbox" >
-              <span class="slider round "></span>
-            </label>
-            <a class="dropdown-item" href="#"> ---- </a>
-          </div>
-        </li>
+        
       </ul>
     </div>
   </nav>
