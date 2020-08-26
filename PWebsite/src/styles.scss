@@ -1,0 +1,289 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+
+html
+{
+  
+  --mainColor: #f8f9fa;
+  --backgroundColor: white;
+  --textColor:black;
+  --subColorNav : rgba(0,0,0,.8);
+  --subColorLink : rgba(0,0,0,.5);
+  --togglerColor: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  
+
+ 
+}
+
+html[data-theme='light']
+{
+  
+  --mainColor: #f8f9fa;
+  --backgroundColor: white;
+  --textColor:black;
+  --subColorNav : rgba(0,0,0,.8);
+  --subColorLink : rgba(0,0,0,.5);
+  --togglerColor: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+
+
+}
+
+html[data-theme='dark']
+{
+  
+  --mainColor: #343a40;
+  --backgroundColor: #22262a;
+  --textColor:#d9d9d9;
+  --subColorNav : rgba(255,255,255,.8);
+  --subColorLink : rgba(255,255,255,.5);
+  --togglerColor: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  
+}
+
+body
+{
+  background-color: var(--backgroundColor);
+}
+
+
+/*
+BootStrap 4 Custom Nav Colors
+*/
+
+
+
+.navbar-toggler 
+{ 
+  border-color:  var(--textColor);
+} 
+
+ .navbar-toggler-icon 
+ { 
+  
+    background-image:  var(--togglerColor);
+}
+
+
+.navbar-custom {
+  
+  background-color: var(--mainColor);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text 
+{
+  color: var(--textColor);
+}
+
+.navbar-custom .navbar-nav,
+.navbar-custom .nav-link
+{
+  color: var(--subColorLink);
+}
+
+
+.navbar-custom .nav-item.active .nav-link
+{
+  color:var(--textColor);
+}
+
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link
+{
+  color: var(--subColorNav);
+}
+
+/*
+End BootStrap 4 Custom Nav Colors
+*/
+
+
+/*
+Used for the Main Componenet
+*/
+
+.MainContent 
+{
+    color: var(--textColor);
+    background-color: var(--mainColor);
+    text-align:center;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top:3%;
+}
+.SubContent
+{
+    background-color: var(--mainColor);
+    margin-left: 3%;
+    margin-right:3%;
+
+    
+}
+
+
+/*
+End of Main Component Css
+*/
+
+/*
+Used for the Project Componenet
+*/
+
+.ProjectContent 
+{
+    border-top: 2px solid var(--textColor);
+    border-bottom: 2px solid var(--textColor);
+    color: var(--textColor);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2%;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top:3%;
+}
+
+.InlineText
+{
+  padding-top: 4%;
+}
+
+.projectImage
+{
+  height:7vh;
+  width:20%;
+}
+
+
+/*
+End of Project Component Css
+*/
+
+
+
+/*
+Header Componenet Css
+*/
+.thumbnail
+{
+    height:10%;
+    width: 20%;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 22px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: pink;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px pink;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /*
+  End of Header Componenet Css
+  */
+
+  /*
+  Start of Footer Component Css
+  */
+
+  .footer 
+  {
+      background-color: var(--mainColor);
+      color: var(--textColor);
+      text-align:center;
+  }
+
+  .links
+  {
+    color: var(--textColor);
+
+  }
+
+  a.links:hover
+  {
+    color: var(--textColor);
+  }
+  /*
+  End of Footer Component Css
+  */
+
+  /*
+  General Style
+  */
+
+  .projectFlexContainer
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+  }
+
+
+.framepicture
+{
+  padding-left: 40%;
+  padding-right: 40%;
+  width:100%;
+  height: 20vh;
+}
+
+/* 
+ End of General Style 
+*/

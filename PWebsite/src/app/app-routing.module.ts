@@ -7,9 +7,12 @@ import { ExperimentalComponent } from './experimental/experimental.component';
 
 const routes: Routes = [
   {path : 'projects', component: ProjectsComponent},
-  {path : '', component: MainComponent},
+  {path : 'experimental', component: ExperimentalComponent},
   {path : 'main', component: MainComponent},
-  {path : 'experimental', component: ExperimentalComponent}
+  {path : '', component: MainComponent},
+  {path : '**', component: MainComponent}
+  
+  
 ];
 
 @NgModule({
