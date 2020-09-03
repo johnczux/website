@@ -1,0 +1,94 @@
+.specialText
+{
+    color: cyan;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: pink;
+    animation-name: spin;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes  spin
+{
+    from { transform: rotateY(0deg)}
+    to { transform: rotateY(360deg)}
+}
+
+.container
+{
+    position: relative;
+    cursor: pointer;
+    width : 60px;
+    height : 20px;
+    background-color: grey;
+}
+
+.square
+{
+    position: absolute;
+    background-color:purple;
+    width: 20px;
+    height: 20px;
+    left:0px;
+    top: 0px;
+    transition: transform 0.8s;
+
+}
+.container input
+{
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+}
+
+.container input:checked ~.square
+{
+    background-color: purple;
+    transform: translate(40px) ;
+}
+
+.semiCircle
+{
+    margin:auto;
+    
+    width: 101px;
+    height: 101px;
+    border: solid 4px;
+    border-color: #54d7ff transparent transparent transparent;
+    border-radius: 50%/50px 50px 0 0;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; 
+}
+
+.circle
+{
+    margin:auto;
+    position: relative;
+    top: 101px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: solid 2px;
+    border-color: #a1e9ff;
+    background-color: transparent;
+    
+}
+
+#myCanvas
+{
+    margin:auto;
+    width: 25vmax;
+    height: 15vmax;
+    border-style: solid;
+    
+}
+
+@keyframes  rotate
+{
+    from { transform: rotate(0deg)}
+    to { transform: rotate(360deg)}
+}
+
+
+
