@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieHandlerService } from "../cookie-handler.service";
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,8 @@ experimentalLink : boolean = false;
 
 switchCheck : boolean = false;
 
-  constructor( ) { }
+  constructor(private cookieHandler  : CookieHandlerService ) { }
+  
 
 linkClicked(linkClicked)
 {
@@ -36,30 +38,30 @@ changeTheme()
 {
  if(this.switchCheck == false)
  {
+  this.cookieHandler.setCookie();
    this.switchCheck = true;
+   document.documentElement.setAttribute('data-theme', 'dark')
  }
  else
  {
+  this.cookieHandler.deleteCookie();
    this.switchCheck = false;
+   document.documentElement.setAttribute('data-theme', 'light')
  }
  
- this.themeChange();
+ 
 }
 
-themeChange()
-{
-  if(this.switchCheck == true)
-  {
+  ngOnInit(): void {
+
+    if(this.cookieHandler.findCookie() == true)
+    {
+      this.switchCheck = true;
+    let checkbox = <HTMLInputElement> document.getElementById("toggleSwitch");
+    checkbox.checked = true;
     document.documentElement.setAttribute('data-theme', 'dark')
+    }
   }
-  else
-  {
-    document.documentElement.setAttribute('data-theme', 'light')
-  }
-  
-}
-
-  ngOnInit(): void {}
 
 
 }

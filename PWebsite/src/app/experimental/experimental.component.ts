@@ -15,7 +15,6 @@ export class ExperimentalComponent implements OnInit {
 
 draw(event :MouseEvent)
 {
-
    var x  = event.clientX;
    var y = event.clientY;
   

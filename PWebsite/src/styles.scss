@@ -114,15 +114,9 @@ Used for the Main Componenet
     margin-left: 10%;
     margin-right:10%;
     margin-top:3%;
+    margin-bottom:3%;
 }
-.SubContent
-{
-    background-color: var(--mainColor);
-    margin-left: 3%;
-    margin-right:3%;
 
-    
-}
 
 
 /*
@@ -170,8 +164,8 @@ Header Componenet Css
 */
 .thumbnail
 {
-    height:10%;
-    width: 20%;
+    height:15%;
+    width: 25%;
 }
 /* The switch - the box around the slider */
 .switch {
